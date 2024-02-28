@@ -1,4 +1,26 @@
 additional_account_data:
-    additional_data: "Zusätzliche Daten"
+    additional_data: "Weiteres"
     register_number: "Handelsregisternummer"
     place_of_jurisdiction: "Registergericht"
+    openings:
+        mon:
+            am: "Montag vormittag"
+            pm: "Montag nachmittag"
+        tue:
+            am: "Dienstag vormittag"
+            pm: "Dienstag nachmittag"
+        wed:
+            am: "Mittwoch vormittag"
+            pm: "Mittwoch nachmittag"
+        thur:
+            am: "Donnerstag vormittag"
+            pm: "Donnerstag nachmittag"
+        fri:
+            am: "Freitag vormittag"
+            pm: "Freitag nachmittag"
+        sat:
+            am: "Samstag vormittag"
+            pm: "Samstag nachmittag"
+    sections:
+        company_data: "Firmendaten"
+        openings: "Öffnungszeiten"

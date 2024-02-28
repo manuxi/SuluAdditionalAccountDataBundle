@@ -2,3 +2,25 @@ additional_account_data:
     additional_data: "Additional Data"
     register_number: "Commercial register number"
     place_of_jurisdiction: "Registry Court"
+    openings:
+        mon:
+            am: "Monday A.M."
+            pm: "Monday P.M."
+        tue:
+            am: "Tuesday A.M."
+            pm: "Tuesday P.M."
+        wed:
+            am: "Wednesday A.M."
+            pm: "Wednesday P.M."
+        thur:
+            am: "Thursday A.M."
+            pm: "Thursday P.M."
+        fri:
+            am: "Friday A.M."
+            pm: "Friday P.M."
+        sat:
+            am: "Saturday A.M."
+            pm: "Saturday P.M."
+    sections:
+        company_data: "Company Data"
+        openings: "Openings"

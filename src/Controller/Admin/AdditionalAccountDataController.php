@@ -8,8 +8,9 @@ use Doctrine\ORM\EntityManagerInterface;
 use FOS\RestBundle\View\ViewHandlerInterface;
 use HandcraftedInTheAlps\RestRoutingBundle\Controller\Annotations\RouteResource;
 use HandcraftedInTheAlps\RestRoutingBundle\Routing\ClassResourceInterface;
+use Manuxi\SuluAdditionalAccountDataBundle\Entity\Account;
 use Sulu\Bundle\ContactBundle\Admin\ContactAdmin;
-use Sulu\Bundle\ContactBundle\Entity\Account;
+
 use Sulu\Bundle\ContactBundle\Entity\AccountInterface;
 use Sulu\Component\Rest\AbstractRestController;
 use Sulu\Component\Security\SecuredControllerInterface;
@@ -68,6 +69,19 @@ class AdditionalAccountDataController extends AbstractRestController implements 
             'id' => $entity->getId(),
             'registerNumber' => $entity->getRegisterNumber(),
             'placeOfJurisdiction' => $entity->getPlaceOfJurisdiction(),
+
+            'monAm' => $entity->getMonAm(),
+            'monPm' => $entity->getMonPm(),
+            'tueAm' => $entity->getTueAm(),
+            'tuePm' => $entity->getTuePm(),
+            'wedAm' => $entity->getWedAm(),
+            'wedPm' => $entity->getWedPm(),
+            'thurAm' => $entity->getThurAm(),
+            'thurPm' => $entity->getThurPm(),
+            'friAm' => $entity->getFriAm(),
+            'friPm' => $entity->getFriPm(),
+            'satAm' => $entity->getSatAm(),
+            'satPm' => $entity->getSatPm(),
         ];
     }
 
@@ -80,6 +94,19 @@ class AdditionalAccountDataController extends AbstractRestController implements 
     {
         $entity->setRegisterNumber($data['registerNumber']);
         $entity->setPlaceOfJurisdiction($data['placeOfJurisdiction']);
+
+        $entity->setMonAm($data['monAm']);
+        $entity->setMonPm($data['monPm']);
+        $entity->setTueAm($data['tueAm']);
+        $entity->setTuePm($data['tuePm']);
+        $entity->setWedAm($data['wedAm']);
+        $entity->setWedPm($data['wedPm']);
+        $entity->setThurAm($data['thurAm']);
+        $entity->setThurPm($data['thurPm']);
+        $entity->setFriAm($data['friAm']);
+        $entity->setFriPm($data['friPm']);
+        $entity->setSatAm($data['satAm']);
+        $entity->setSatPm($data['satPm']);
     }
 
     public function getSecurityContext(): string
