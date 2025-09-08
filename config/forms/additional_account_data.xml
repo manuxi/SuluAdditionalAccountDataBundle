@@ -24,6 +24,24 @@
                 </property>
             </properties>
         </section>
+        <section name="companyInfoBlock">
+            <meta>
+                <title>additional_account_data.sections.company_info</title>
+            </meta>
+            <properties>
+                <property name="descriptor" type="text_line" colspan="6">
+                    <meta>
+                        <title>additional_account_data.descriptor</title>
+                    </meta>
+                </property>
+
+                <property name="claim" type="text_line" colspan="6">
+                    <meta>
+                        <title>additional_account_data.claim</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
         <section name="openingsBlock">
             <meta>
                 <title>additional_account_data.sections.openings</title>

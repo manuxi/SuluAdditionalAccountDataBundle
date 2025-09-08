@@ -17,6 +17,12 @@ class Account extends SuluAccount
     private ?string $regNumber;
 
     #[ORM\Column(type: Types::STRING, length: 255, nullable: true)]
+    private ?string $descriptor;
+
+    #[ORM\Column(type: Types::STRING, length: 255, nullable: true)]
+    private ?string $claim;
+
+    #[ORM\Column(type: Types::STRING, length: 255, nullable: true)]
     private ?string $monAm;
 
     #[ORM\Column(type: Types::STRING, length: 255, nullable: true)]
@@ -71,6 +77,26 @@ class Account extends SuluAccount
     public function getRegNumber(): ?string
     {
         return $this->regNumber;
+    }
+
+    public function getDescriptor(): ?string
+    {
+        return $this->descriptor;
+    }
+
+    public function setDescriptor(?string $descriptor): void
+    {
+        $this->descriptor = $descriptor;
+    }
+
+    public function getClaim(): ?string
+    {
+        return $this->claim;
+    }
+
+    public function setClaim(?string $claim): void
+    {
+        $this->claim = $claim;
     }
 
     public function getFriAm(): ?string

@@ -70,6 +70,9 @@ class AdditionalAccountDataController extends AbstractRestController implements 
             'registerNumber' => $entity->getRegisterNumber(),
             'placeOfJurisdiction' => $entity->getPlaceOfJurisdiction(),
 
+            'descriptor' => $entity->getDescriptor(),
+            'claim' => $entity->getClaim(),
+
             'monAm' => $entity->getMonAm(),
             'monPm' => $entity->getMonPm(),
             'tueAm' => $entity->getTueAm(),
@@ -94,6 +97,9 @@ class AdditionalAccountDataController extends AbstractRestController implements 
     {
         $entity->setRegisterNumber($data['registerNumber']);
         $entity->setPlaceOfJurisdiction($data['placeOfJurisdiction']);
+
+        $entity->setDescriptor($data['descriptor']);
+        $entity->setClaim($data['claim']);
 
         $entity->setMonAm($data['monAm']);
         $entity->setMonPm($data['monPm']);

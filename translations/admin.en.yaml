@@ -2,6 +2,8 @@ additional_account_data:
     additional_data: "Additional Data"
     register_number: "Commercial register number"
     place_of_jurisdiction: "Registry Court"
+    descriptor: "Descriptor"
+    claim: "Claim"
     openings:
         mon:
             am: "Monday A.M."
@@ -23,4 +25,5 @@ additional_account_data:
             pm: "Saturday P.M."
     sections:
         company_data: "Company Data"
+        company_info: "Descriptor / Claim"
         openings: "Openings"

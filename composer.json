@@ -1,5 +1,6 @@
 {
     "name": "manuxi/sulu-additional-account-data-bundle",
+    "version": "1.0.0",
     "description": "Say hello to Sulu additional account data!",
     "type": "symfony-bundle",
     "keywords": [

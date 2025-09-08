@@ -2,6 +2,8 @@ additional_account_data:
     additional_data: "Weiteres"
     register_number: "Handelsregisternummer"
     place_of_jurisdiction: "Registergericht"
+    descriptor: "Descriptor"
+    claim: "Slogan"
     openings:
         mon:
             am: "Montag vormittag"
@@ -23,4 +25,5 @@ additional_account_data:
             pm: "Samstag nachmittag"
     sections:
         company_data: "Firmendaten"
+        company_info: "Descriptor / Slogan"
         openings: "Öffnungszeiten"
