@@ -1,6 +1,6 @@
 {
     "name": "manuxi/sulu-additional-account-data-bundle",
-    "version": "1.0.0",
+    "version": "1.2.1",
     "description": "Say hello to Sulu additional account data!",
     "type": "symfony-bundle",
     "keywords": [
@@ -18,7 +18,7 @@
     ],
     "require": {
         "php": "^8.1",
-        "doctrine/doctrine-bundle": "^2.5",
+        "doctrine/doctrine-bundle": "^2.12",
         "phpcr/phpcr-migrations-bundle": "^1.6",
         "sulu/sulu": "^2.5",
         "symfony/config": "^6.2 | ^7.0",
