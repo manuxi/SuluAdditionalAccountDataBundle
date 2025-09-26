@@ -3,7 +3,7 @@
 <img src="https://img.shields.io/github/license/manuxi/SuluAdditionalAccountDataBundle" alt="GitHub license">
 </a>
 <a href="https://github.com/manuxi/SuluAdditionalAccountDataBundle/tags" target="_blank">
-<img src="https://img.shields.io/github/v/tag/manuxi/SuluAdditionalAccountDataBundle" alt="GitHub license">
+<img src="https://img.shields.io/github/v/tag/manuxi/SuluAdditionalAccountDataBundle?include_prereleases&sort=semver" alt="GitHub license">
 </a>
 
 I made this bundle to have the possibility to manage additional properties in the Sulu account.
