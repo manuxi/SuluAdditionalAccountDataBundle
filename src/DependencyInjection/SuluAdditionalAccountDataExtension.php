@@ -19,13 +19,13 @@ class SuluAdditionalAccountDataExtension extends Extension implements PrependExt
                 [
                     "forms" => [
                         "directories" => [
-                            __DIR__ . "/../../config/forms"
+                            __DIR__ . "/../Resources/config/forms"
                         ]
                     ],
                     "resources" => [
                         "additional_account_data" => [
                             "routes" => [
-                                "detail" => 'sulu_additional_account_data.get_additional-account-data'
+                                "detail" => 'sulu_additional_account_data.get'
                             ]
                         ]
                     ]
@@ -56,7 +56,7 @@ class SuluAdditionalAccountDataExtension extends Extension implements PrependExt
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
-        $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__ . "/../../config"));
+        $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__ . "/../Resources/config"));
         $loader->load("services.xml");
     }
 

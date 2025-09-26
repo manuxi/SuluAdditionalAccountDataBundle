@@ -26,10 +26,11 @@ return [
     Manuxi\SuluAdditionalAccountDataBundle\SuluAdditionalAccountDataBundle::class => ['all' => true],
 ];
 ```
-Please add the following to your `routes_admin.yaml`:
+Please add the following to your `config/routes/sulu_admin.yaml`:
 ```yaml
-SuluAdditionalAccountDataBundle:
-    resource: '@SuluAdditionalAccountDataBundle/Resources/config/routes_admin.yml'
+sulu_additional_account_data_api:
+    resource: '@SuluAdditionalAccountDataBundle/Resources/config/routing_api.yaml'
+    prefix: /admin/api
 ```
 Last but not least the schema of the database needs to be updated.  
 

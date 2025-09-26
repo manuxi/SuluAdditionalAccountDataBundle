@@ -6,11 +6,8 @@ namespace Manuxi\SuluAdditionalAccountDataBundle\Controller\Admin;
 
 use Doctrine\ORM\EntityManagerInterface;
 use FOS\RestBundle\View\ViewHandlerInterface;
-use HandcraftedInTheAlps\RestRoutingBundle\Controller\Annotations\RouteResource;
-use HandcraftedInTheAlps\RestRoutingBundle\Routing\ClassResourceInterface;
 use Manuxi\SuluAdditionalAccountDataBundle\Entity\Account;
 use Sulu\Bundle\ContactBundle\Admin\ContactAdmin;
-
 use Sulu\Bundle\ContactBundle\Entity\AccountInterface;
 use Sulu\Component\Rest\AbstractRestController;
 use Sulu\Component\Security\SecuredControllerInterface;
@@ -19,20 +16,14 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
-/**
- * @RouteResource("additional-account-data")
- */
-class AdditionalAccountDataController extends AbstractRestController implements ClassResourceInterface, SecuredControllerInterface
+class AdditionalAccountDataController extends AbstractRestController implements SecuredControllerInterface
 {
-    private EntityManagerInterface $entityManager;
 
     public function __construct(
-        EntityManagerInterface $entityManager,
+        private EntityManagerInterface $entityManager,
         ViewHandlerInterface $viewHandler,
         ?TokenStorageInterface $tokenStorage = null
     ) {
-        $this->entityManager = $entityManager;
-
         parent::__construct($viewHandler, $tokenStorage);
     }
 
@@ -95,24 +86,24 @@ class AdditionalAccountDataController extends AbstractRestController implements 
      */
     protected function mapDataToEntity(array $data, Account $entity): void
     {
-        $entity->setRegisterNumber($data['registerNumber']);
-        $entity->setPlaceOfJurisdiction($data['placeOfJurisdiction']);
+        $entity->setRegisterNumber($data['registerNumber'] ?? null);
+        $entity->setPlaceOfJurisdiction($data['placeOfJurisdiction'] ?? null);
 
-        $entity->setDescriptor($data['descriptor']);
-        $entity->setClaim($data['claim']);
+        $entity->setDescriptor($data['descriptor'] ?? null);
+        $entity->setClaim($data['claim'] ?? null);
 
-        $entity->setMonAm($data['monAm']);
-        $entity->setMonPm($data['monPm']);
-        $entity->setTueAm($data['tueAm']);
-        $entity->setTuePm($data['tuePm']);
-        $entity->setWedAm($data['wedAm']);
-        $entity->setWedPm($data['wedPm']);
-        $entity->setThurAm($data['thurAm']);
-        $entity->setThurPm($data['thurPm']);
-        $entity->setFriAm($data['friAm']);
-        $entity->setFriPm($data['friPm']);
-        $entity->setSatAm($data['satAm']);
-        $entity->setSatPm($data['satPm']);
+        $entity->setMonPm($data['monPm'] ?? null);
+        $entity->setTueAm($data['tueAm'] ?? null);
+        $entity->setMonAm($data['monAm'] ?? null);
+        $entity->setTuePm($data['tuePm'] ?? null);
+        $entity->setWedAm($data['wedAm'] ?? null);
+        $entity->setWedPm($data['wedPm'] ?? null);
+        $entity->setThurAm($data['thurAm'] ?? null);
+        $entity->setThurPm($data['thurPm'] ?? null);
+        $entity->setFriAm($data['friAm'] ?? null);
+        $entity->setFriPm($data['friPm'] ?? null);
+        $entity->setSatAm($data['satAm'] ?? null);
+        $entity->setSatPm($data['satPm'] ?? null);
     }
 
     public function getSecurityContext(): string

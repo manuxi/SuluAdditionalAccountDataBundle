@@ -1,0 +1,15 @@
+sulu_additional_account_data.get:
+    path: /accounts/{id}/additional-data
+    controller: additional_account_data.controller::getAction
+    methods: GET
+    format: json
+    requirements:
+        _format: json|csv
+
+sulu_additional_account_data.put:
+    path: /accounts/{id}/additional-data
+    controller: additional_account_data.controller::putAction
+    methods: PUT
+    format: json
+    requirements:
+        _format: json|csv

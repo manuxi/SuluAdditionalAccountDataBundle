@@ -2,8 +2,8 @@ additional_account_data:
     additional_data: "Weiteres"
     register_number: "Handelsregisternummer"
     place_of_jurisdiction: "Registergericht"
-    descriptor: "Descriptor"
-    claim: "Slogan"
+    descriptor: "Deskriptor"
+    claim: "Claim"
     openings:
         mon:
             am: "Montag vormittag"
