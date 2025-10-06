@@ -25,5 +25,5 @@ additional_account_data:
             pm: "Samstag nachmittag"
     sections:
         company_data: "Firmendaten"
-        company_info: "Descriptor / Slogan"
+        company_info: "Descriptor / Claim"
         openings: "Öffnungszeiten"
