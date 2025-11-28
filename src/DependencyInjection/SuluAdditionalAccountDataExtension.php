@@ -25,7 +25,7 @@ class SuluAdditionalAccountDataExtension extends Extension implements PrependExt
                     "resources" => [
                         "additional_account_data" => [
                             "routes" => [
-                                "detail" => 'sulu_additional_account_data.get_additional-account-data'
+                                "detail" => 'sulu_additional_account_data.get'
                             ]
                         ]
                     ]

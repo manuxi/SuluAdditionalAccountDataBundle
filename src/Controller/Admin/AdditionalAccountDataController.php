@@ -6,23 +6,21 @@ namespace Manuxi\SuluAdditionalAccountDataBundle\Controller\Admin;
 
 use Doctrine\ORM\EntityManagerInterface;
 use FOS\RestBundle\View\ViewHandlerInterface;
-use HandcraftedInTheAlps\RestRoutingBundle\Controller\Annotations\RouteResource;
-use HandcraftedInTheAlps\RestRoutingBundle\Routing\ClassResourceInterface;
 use Manuxi\SuluAdditionalAccountDataBundle\Entity\Account;
 use Sulu\Bundle\ContactBundle\Admin\ContactAdmin;
 
 use Sulu\Bundle\ContactBundle\Entity\AccountInterface;
 use Sulu\Component\Rest\AbstractRestController;
 use Sulu\Component\Security\SecuredControllerInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
-/**
- * @RouteResource("additional-account-data")
- */
-class AdditionalAccountDataController extends AbstractRestController implements ClassResourceInterface, SecuredControllerInterface
+#[Route(path: 'additional-account-data')]
+class AdditionalAccountDataController extends AbstractRestController implements SecuredControllerInterface
 {
     private EntityManagerInterface $entityManager;
 
@@ -36,16 +34,24 @@ class AdditionalAccountDataController extends AbstractRestController implements 
         parent::__construct($viewHandler, $tokenStorage);
     }
 
+    #[Route(path: '/{id}', methods: ['GET'], name: 'sulu_additional_account_data.get')]
     public function getAction(int $id): Response
     {
+        /** @var AccountInterface|null $account */
         $account = $this->entityManager->getRepository(AccountInterface::class)->find($id);
         if (!$account) {
             throw new NotFoundHttpException();
         }
 
-        return $this->handleView($this->view($this->getDataForEntity($account)));
+        if (!$account instanceof Account) {
+            throw new \RuntimeException(sprintf('Account entity is not an instance of %s', Account::class));
+        }
+
+        //return $this->handleView($this->view($this->getDataForEntity($account)));
+        return new JsonResponse($this->getDataForEntity($account));
     }
 
+    #[Route(path: '/{id}', methods: ['PUT'], name: 'sulu_additional_account_data.put')]
     public function putAction(Request $request, int $id): Response
     {
         $account = $this->entityManager->getRepository(AccountInterface::class)->find($id);
@@ -56,7 +62,8 @@ class AdditionalAccountDataController extends AbstractRestController implements 
         $this->mapDataToEntity($request->request->all(), $account);
         $this->entityManager->flush();
 
-        return $this->handleView($this->view($this->getDataForEntity($account)));
+        //return $this->handleView($this->view($this->getDataForEntity($account)));
+        return new JsonResponse($this->getDataForEntity($account));
     }
 
     /**

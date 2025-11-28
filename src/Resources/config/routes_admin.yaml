@@ -1,0 +1,6 @@
+sulu_additional_account_data_api:
+    resource: Manuxi\SuluAdditionalAccountDataBundle\Controller\Admin\AdditionalAccountDataController
+    type: attribute
+    prefix: /admin/api
+    options:
+        expose: true

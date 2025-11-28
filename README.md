@@ -1,10 +1,7 @@
 # SuluAdditionalAccountDataBundle!
-<a href="https://github.com/manuxi/SuluAdditionalAccountDataBundle/blob/main/LICENSE" target="_blank">
-<img src="https://img.shields.io/github/license/manuxi/SuluAdditionalAccountDataBundle" alt="GitHub license">
-</a>
-<a href="https://github.com/manuxi/SuluAdditionalAccountDataBundle/tags" target="_blank">
-<img src="https://img.shields.io/github/v/tag/manuxi/SuluAdditionalAccountDataBundle" alt="GitHub license">
-</a>
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/manuxi/SuluAdditionalAccountDataBundle/LICENSE)
+![GitHub Tag](https://img.shields.io/github/v/tag/manuxi/SuluAdditionalAccountDataBundle)
+![Supports Sulu 2.6 or later](https://img.shields.io/badge/%20Sulu->=2.6-0088cc?color=00b2df)
 
 I made this bundle to have the possibility to manage additional properties in the Sulu account.
 Please feel comfortable submitting feature requests. 
@@ -29,7 +26,7 @@ return [
 Please add the following to your `routes_admin.yaml`:
 ```yaml
 SuluAdditionalAccountDataBundle:
-    resource: '@SuluAdditionalAccountDataBundle/Resources/config/routes_admin.yml'
+    resource: '@SuluAdditionalAccountDataBundle/Resources/config/routes_admin.yaml'
 ```
 Last but not least the schema of the database needs to be updated.  
 
