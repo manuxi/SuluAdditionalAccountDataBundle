@@ -9,6 +9,10 @@ This bundle is still in development. Use at own risk 🤞🏻
 
 ![image](https://github.com/user-attachments/assets/3b88cb37-ab25-40b0-9bef-224d6a150d97)
 
+## 📝 Note
+
+Abandoned in favor of the new ![SuluExtendedAccountBundle](https://github.com/manuxi/SuluExtendedAccountBundle).
+
 ## 👩🏻‍🏭 Installation
 Install the package with:
 ```console
@@ -49,3 +53,4 @@ There exists no configuration yet.
 ## 👩‍🍳 Contributing
 For the sake of simplicity this extension was kept small.
 Please feel comfortable submitting issues or pull requests. As always I'd be glad to get your feedback to improve the extension :).
+
