@@ -11,7 +11,7 @@ This bundle is still in development. Use at own risk 🤞🏻
 
 ## 📝 Note
 
-Abandoned in favor of the new ![SuluExtendedAccountBundle](https://github.com/manuxi/SuluExtendedAccountBundle).
+Abandoned in favor of the new [SuluExtendedAccountBundle](https://github.com/manuxi/SuluExtendedAccountBundle).
 
 ## 👩🏻‍🏭 Installation
 Install the package with:
@@ -53,4 +53,5 @@ There exists no configuration yet.
 ## 👩‍🍳 Contributing
 For the sake of simplicity this extension was kept small.
 Please feel comfortable submitting issues or pull requests. As always I'd be glad to get your feedback to improve the extension :).
+
 
